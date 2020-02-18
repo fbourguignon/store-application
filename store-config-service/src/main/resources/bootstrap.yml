@@ -1,8 +1,11 @@
 server:
-  port: 9090
+  port: 8088
+
 spring:
   cloud:
     config:
       server:
+          encrypt:
+            enabled: false
           git:
             uri: https://github.com/fbourguignon/store-config
