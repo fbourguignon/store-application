@@ -9,36 +9,22 @@ services:
     ports:
       - 8888:8888
     restart: always
-    healthcheck:
-        test: curl -l http://localhost:8888/store-config-service/default
     networks:
       - spring-cloud-network
 
   eureka-server:
-      image: store-eureka-service
-      build:
-        context: .
-        dockerfile: ./store-eureka-service/Dockerfile
-      ports:
-        - 9091:9091
-      restart: always
-      depends_on:
-        - config-server
-      networks:
-        - spring-cloud-network
+    image: store-eureka-service
+    build:
+      context: .
+      dockerfile: ./store-eureka-service/Dockerfile
+    ports:
+      - 9091:9091
+    restart: always
+    depends_on:
+      - config-server
+    networks:
+      - spring-cloud-network
 
-#  db:
-#    image: postgres:latest
-#    ports:
-#      - "5432:5432"
-#    restart: always
-#    environment:
-#      POSTGRES_DB: store
-#      POSTGRES_USER: postgres
-#      POSTGRES_PASSWORD: postgres
-#    networks:
-#      - backend
-#
 networks:
     spring-cloud-network:
         driver: bridge

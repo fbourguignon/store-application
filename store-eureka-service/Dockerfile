@@ -2,7 +2,6 @@ FROM maven:3-jdk-8 as builder
 WORKDIR /opt/app
 
 COPY . /opt/app
-RUN chmod +x wait-for-it.sh
 ENV MAVEN_OPTS="-Xmx1024m"
 RUN mvn clean package -DskipTests
 
