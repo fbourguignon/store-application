@@ -27,6 +27,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>store-eureka-service</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
