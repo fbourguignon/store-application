@@ -33,6 +33,7 @@
 	<modules>
 		<module>store-config-service</module>
 		<module>store-eureka-service</module>
+		<module>store-auth-service</module>
 	</modules>
 	
 </project>
