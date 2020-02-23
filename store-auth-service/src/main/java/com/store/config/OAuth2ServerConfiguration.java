@@ -25,7 +25,7 @@ import org.springframework.security.oauth2.provider.token.store.InMemoryTokenSto
 @Configuration
 public class OAuth2ServerConfiguration {
 
-    private static final String RESOURCE_ID = "restservice";
+    private static final String RESOURCE_ID = "storeservice";
 
     @Configuration
     @EnableResourceServer
