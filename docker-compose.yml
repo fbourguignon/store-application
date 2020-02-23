@@ -32,6 +32,8 @@ services:
         dockerfile: ./store-auth-service/Dockerfile
       ports:
         - 9092:9092
+      environment:
+            - "SPRING_PROFILES_ACTIVE=container"
       restart: always
       depends_on:
         - config-server
@@ -39,6 +41,7 @@ services:
         - auth-db
       networks:
         - spring-cloud-network
+        - auth-network
 
   auth-db:
       image: postgres:latest
