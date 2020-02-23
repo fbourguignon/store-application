@@ -1,4 +1,4 @@
-package com.store;
+package com.store.domain;
 
 public class Const {
     public static final String ROLE_ADMIN = "ROLE_ADMIN";

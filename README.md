@@ -10,6 +10,13 @@ Template project with Spring Cloud starters.
 - [x] Docker
 - [x] PostgresSQL
 
+### Build Project 
+From project directory, run maven clean install.
+```console
+mvn clean install
+```
+![picture](img/docker-ps-a.png)
+
 ### Run the Application
 
 From project directory, start up the application by running.
@@ -18,6 +25,7 @@ Compose pulls and build the images from project, and starts the services.
 ```console
 docker-compose up -d --build
 ```
+
 
 ### Authentication
    

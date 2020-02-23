@@ -1,7 +1,7 @@
 package com.store.controller;
 
 
-import com.store.Const;
+import com.store.domain.Const;
 import com.store.domain.User;
 import com.store.repository.RoleRepository;
 import com.store.repository.UserRepository;

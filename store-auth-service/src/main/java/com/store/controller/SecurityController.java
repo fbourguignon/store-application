@@ -1,6 +1,6 @@
 package com.store.controller;
 
-import com.store.Const;
+import com.store.domain.Const;
 import com.store.domain.User;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.core.context.SecurityContextHolder;

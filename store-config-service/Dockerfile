@@ -3,7 +3,6 @@ WORKDIR /opt/app
 
 COPY . /opt/app
 ENV MAVEN_OPTS="-Xmx1024m"
-RUN mvn clean package -DskipTests
 
 
 FROM openjdk:8-jre-alpine
