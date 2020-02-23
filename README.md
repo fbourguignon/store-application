@@ -1,4 +1,4 @@
-# store-application  # store-api  [![CircleCI](https://circleci.com/gh/fbourguignon/store-api/tree/master.svg?style=svg)](https://circleci.com/gh/fbourguignon/store-application/tree/master)
+# store-application [![CircleCI](https://circleci.com/gh/fbourguignon/store-api/tree/master.svg?style=svg)](https://circleci.com/gh/fbourguignon/store-application/tree/master)
 
 Template project with Spring Cloud starters.
 
