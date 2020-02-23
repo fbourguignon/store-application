@@ -25,6 +25,36 @@ services:
     networks:
       - spring-cloud-network
 
+  auth-server:
+      image: store-auth-service
+      build:
+        context: .
+        dockerfile: ./store-auth-service/Dockerfile
+      ports:
+        - 9092:9092
+      restart: always
+      depends_on:
+        - config-server
+        - eureka-server
+        - auth-db
+      networks:
+        - spring-cloud-network
+
+  auth-db:
+      image: postgres:latest
+      ports:
+        - "5432:5432"
+      restart: always
+      environment:
+        POSTGRES_DB: auth
+        POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: postgres
+      networks:
+        - auth-network
+
+
 networks:
     spring-cloud-network:
         driver: bridge
+    auth-network:
+         driver: bridge
