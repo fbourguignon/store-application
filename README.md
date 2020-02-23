@@ -19,14 +19,13 @@ mvn clean install
 ### Run the Application
 
 From project directory, start up the application by running.
-Compose pulls and build the images from project, and starts the services.
-
-![picture](img/docker-ps-a.png)
 
 ```console
 docker-compose up -d --build
 ```
+Compose pulls and build the images from project, and starts the services.
 
+![picture](img/docker-ps-a.png)
 
 ### Authentication
    
