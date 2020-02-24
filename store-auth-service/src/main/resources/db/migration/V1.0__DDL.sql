@@ -1,11 +1,11 @@
 create table if not exists tb_role
 (
   id          uuid not null,
-  type varchar(60),
+  name varchar(60),
   constraint tb_role_pkey
   primary key (id),
   constraint uk_igh0hgnpu0k4vj2cyyiivfene
-  unique (type)
+  unique (name)
 );
 
 create table if not exists tb_user
