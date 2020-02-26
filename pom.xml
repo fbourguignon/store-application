@@ -34,6 +34,7 @@
 		<module>store-config-service</module>
 		<module>store-eureka-service</module>
 		<module>store-auth-service</module>
+		<module>store-product-service</module>
 	</modules>
 	
 </project>
