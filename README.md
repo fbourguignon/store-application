@@ -32,14 +32,12 @@ Compose pulls and build the images from project, and starts the services.
 To request a token, the client must be registered on the authorization server and must send the client-id and the secret that we configured in the application.yml encoded in the Base 64.
 
    ```json
-   POST /oauth/token HTTP/1.1
+   POST /oauth/token?grant_type=password&amp;username=jhon@gmail.com&amp;password=123456 HTTP/1.1
    Host: localhost:9092
-   Content-Type: application/json  
-   Authorization: Basic Y2xpZW50OjEyMw== 
-   {
-       "username": "jhon@gmail.com",
-       "password": "123456"
-   }
+   Authorization: Basic Y2xpZW50OjEyMw==
+   Content-Type: application/json
+   Cache-Control: no-cache
+   Postman-Token: adf4750e-4429-e983-9550-0c0523260e86
    ```
    
 ### Authorization
