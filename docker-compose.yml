@@ -43,6 +43,25 @@ services:
         - spring-cloud-network
         - auth-network
 
+  product-server:
+        image: store-product-service
+        build:
+          context: .
+          dockerfile: ./store-product-service/Dockerfile
+        ports:
+          - 9093:9093
+        environment:
+              - "SPRING_PROFILES_ACTIVE=container"
+        restart: always
+        depends_on:
+          - config-server
+          - eureka-server
+          - auth-server
+          - product-db
+        networks:
+          - spring-cloud-network
+          - product-network
+
   auth-db:
       image: postgres:latest
       ports:
@@ -55,9 +74,23 @@ services:
       networks:
         - auth-network
 
+  product-db:
+        image: postgres:latest
+        ports:
+          - "5433:5432"
+        restart: always
+        environment:
+          POSTGRES_DB: product
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+        networks:
+          - product-network
+
 
 networks:
     spring-cloud-network:
         driver: bridge
     auth-network:
-         driver: bridge
+        driver: bridge
+    product-network:
+        driver: bridge
