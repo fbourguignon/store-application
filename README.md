@@ -16,6 +16,7 @@ Template project with Spring Cloud starters.
 - store-auth-service    (Oauth2 authorization server )
 - store-config-service  (Distributed configuration server)
 - store-eureka-service  (Service discovery server)
+- store-gateway-service (API Gateway server)
 - store-product-service (Oauth2 resource server for product domain)
 
 ### Build Projects 
