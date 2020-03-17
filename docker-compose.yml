@@ -62,6 +62,20 @@ services:
           - spring-cloud-network
           - product-network
 
+  gateway-server:
+      image: store-gateway-service
+      build:
+        context: .
+        dockerfile: ./store-gateway-service/Dockerfile
+      ports:
+        - 8080:8080
+      restart: always
+      depends_on:
+        - config-server
+        - eureka-server
+      networks:
+        - spring-cloud-network
+
   auth-db:
       image: postgres:latest
       ports:

@@ -7,6 +7,7 @@ Template project with Spring Cloud starters.
 - [x] Spring Cloud Oauth 2
 - [x] Spring Cloud Eureka Service Discovery
 - [x] Spring Cloud Config Server
+- [x] Spring Cloud Zuul API Gateway
 - [x] Docker
 - [x] PostgresSQL
 
